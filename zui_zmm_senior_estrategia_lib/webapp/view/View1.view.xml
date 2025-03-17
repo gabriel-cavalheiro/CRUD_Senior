@@ -1,0 +1,103 @@
+<mvc:View
+  controllerName="com.girassol.zuizmmseniorestrategialib.controller.View1"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+>
+  <App id="app">
+    <Page id="P1" title="{i18n>appDescription}">
+      <content>
+        <HBox
+          id= "containerSearch"
+          width="100%"
+          class="sapUiSmallMarginTop sapUiSmallMarginBegin sapUiSmallMarginBottom"
+        >
+          <VBox width="25%">
+            <SearchField
+              id="searchField"
+              liveChange="onSearch"
+              width="100%"
+              placeholder="Buscar por Tipo de Pedido (Bsart)"
+            />
+          </VBox>
+        </HBox>
+
+        <HBox
+          width="100%"
+          alignItems="End"
+          justifyContent="SpaceBetween"
+          class="sapUiSmallMarginBottom sapUiSmallMarginBegin paddingRight"
+        >
+          <!-- Container para Inputs -->
+          <HBox>
+            <VBox class="sapUiSmallMarginEnd">
+              <Label text="Tipo de pedido" labelFor="inp1" />
+              <Input id="inp1" width="12rem" />
+            </VBox>
+            <VBox class="sapUiSmallMarginEnd">
+              <Label text="Organização de compras" labelFor="inp2" />
+              <Input id="inp2" width="12rem" />
+            </VBox>
+            <VBox class="sapUiSmallMarginEnd">
+              <Label text="Grupo de Compra" labelFor="inp3" />
+              <Input id="inp3" width="12rem" />
+            </VBox>
+            <VBox class="sapUiSmallMarginEnd">
+              <Label text="Código de Aprovação" labelFor="inp4" />
+              <Input id="inp4" width="12rem" />
+            </VBox>
+          </HBox>
+
+          <HBox class="sapUiSmallMarginEnd buttonPosition" alignItems="End">
+            <Button
+              id="salv1"
+              class="buttonAction"
+              text="{i18n>salv}"
+              press="onSave"
+              type="Accept"
+            />
+            <Button
+              id="btnDelete"
+              class="buttonAction sapUiTinyMarginBegin"
+              text="{i18n>del}"
+              press="onDelete"
+              type="Reject"
+            />
+          </HBox>
+        </HBox>
+
+        <Table
+          id="tableTypePo"
+          class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+          mode="SingleSelectMaster"
+          selectionChange="onSelectItem"
+          items="{ path: '/ZMMT_SENIOR_POSet' }"
+        >
+          <columns>
+            <Column id="C1">
+              <Text text="{i18n>typePO}" />
+            </Column>
+            <Column id="C2">
+              <Text text="{i18n>orgComp}" />
+            </Column>
+            <Column id="C3">
+              <Text text="{i18n>grpComp}" />
+            </Column>
+            <Column id="C4">
+              <Text text="{i18n>codAprov}" />
+            </Column>
+          </columns>
+          <items>
+            <ColumnListItem>
+              <cells>
+                <Text text="{Bsart}" />
+                <Text text="{Ekorg}" />
+                <Text text="{Ekgrp}" />
+                <Text text="{Zzcodapr}" />
+              </cells>
+            </ColumnListItem>
+          </items>
+        </Table>
+      </content>
+    </Page>
+  </App>
+</mvc:View>

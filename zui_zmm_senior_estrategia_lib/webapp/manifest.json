@@ -1,0 +1,112 @@
+{
+    "_version": "1.65.0",
+    "sap.app": {
+        "id": "com.girassol.zuizmmsenior",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.16.3",
+            "toolsId": "39131138-2049-4e31-bbf1-28d7a5d3721e"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata/sap/ZMM_SENIOR_PO_GW_SRV/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.133.0",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.girassol.zuizmmseniorestrategialib.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {}
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "com.girassol.zuizmmseniorestrategialib.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "transition": "slide"
+            },
+            "routes": [
+                {   
+                    "name": "RouteView1",
+                    "pattern": "",
+                    "target": [
+                        "TargetView1"
+                    ]
+                }
+
+            ],
+            "targets": {
+                "TargetView1": {
+                    "id": "View1",
+                    "name": "View1",
+                    "viewLevel": 1
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "com.girassol.zuizmmseniorestrategialib.view.View1",
+            "type": "XML",
+            "id": "app"
+        }
+    }
+}

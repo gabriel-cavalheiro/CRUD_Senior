@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: com.girassol.zuizmmseniorestrategialib
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          url: https://srvsaps4d.girassolagricola.com.br:50001
+          client: '100'
+          auth:
+            username: ${FIORI_TOOLS_USER}
+            password: ${FIORI_TOOLS_PASSWORD}
+        app:
+          name: Z_C_SENIOR_ESTR
+          description: APP Estrategia de Liberação
+          package: ZPMM_FIORI_MIRO
+          transport: S4DK917733
+        exclude:
+          - /test/

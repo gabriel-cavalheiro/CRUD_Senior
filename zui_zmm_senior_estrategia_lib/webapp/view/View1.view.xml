@@ -87,7 +87,7 @@
             </Column>
           </columns>
           <items>
-            <ColumnListItem>
+            <ColumnListItem class="teste">
               <cells>
                 <Text text="{Bsart}" />
                 <Text text="{Ekorg}" />

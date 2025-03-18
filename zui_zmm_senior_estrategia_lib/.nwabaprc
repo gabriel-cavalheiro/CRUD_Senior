@@ -1,0 +1,13 @@
+{
+    "base": "./dist",
+    "conn_userstrictssl": false,
+    "conn_server": "https://srvsaps4d.girassolagricola.com.br:50001",
+    "conn_client": "100",
+    "conn_user": "CF_ACUNHA",
+    "conn_password": "Cunha@2025",
+    "abap_package": "ZPMM_FIORI_MIRO",
+    "abap_bsp": "ZMM_SENIOR_SM30",
+    "abap_bsp_text": "App Fiori Freestyle de Manutenção de Tipos de Pedidos Sênior",
+    "abap_language": "PT",
+    "abap_transport": "S4DK917733"
+}

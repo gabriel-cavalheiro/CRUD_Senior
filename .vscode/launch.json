@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Start zui_zmm_senior_estrategia_lib",
+            "name": "Start zmm_senior_sm30",
             "type": "node",
             "request": "launch",
-            "cwd": "${workspaceFolder}/zui_zmm_senior_estrategia_lib",
+            "cwd": "${workspaceFolder}/zmm_senior_sm30",
             "runtimeExecutable": "npx",
             "windows": {
                 "runtimeExecutable": "npx.cmd"
@@ -16,7 +16,7 @@
             ],
             "args": [
                 "--open",
-                "test/flpSandbox.html#comgirassolzuizmmseniorestrate-display"
+                "test/flpSandbox.html#zmmseniorsm30zmmseniorsm30-display"
             ],
             "console": "internalConsole",
             "internalConsoleOptions": "openOnSessionStart",
@@ -27,10 +27,10 @@
             }
         },
         {
-            "name": "Start zui_zmm_senior_estrategia_lib Mock",
+            "name": "Start zmm_senior_sm30 Mock",
             "type": "node",
             "request": "launch",
-            "cwd": "${workspaceFolder}/zui_zmm_senior_estrategia_lib",
+            "cwd": "${workspaceFolder}/zmm_senior_sm30",
             "runtimeExecutable": "npx",
             "windows": {
                 "runtimeExecutable": "npx.cmd"
@@ -43,7 +43,7 @@
                 "--config",
                 "./ui5-mock.yaml",
                 "--open",
-                "test/flpSandbox.html#comgirassolzuizmmseniorestrate-display"
+                "test/flpSandbox.html#zmmseniorsm30zmmseniorsm30-display"
             ],
             "console": "internalConsole",
             "internalConsoleOptions": "openOnSessionStart",
@@ -53,10 +53,10 @@
             }
         },
         {
-            "name": "Start zui_zmm_senior_estrategia_lib Local",
+            "name": "Start zmm_senior_sm30 Local",
             "type": "node",
             "request": "launch",
-            "cwd": "${workspaceFolder}/zui_zmm_senior_estrategia_lib",
+            "cwd": "${workspaceFolder}/zmm_senior_sm30",
             "runtimeExecutable": "npx",
             "windows": {
                 "runtimeExecutable": "npx.cmd"
@@ -69,7 +69,7 @@
                 "--config",
                 "./ui5-local.yaml",
                 "--open",
-                "test/flpSandbox.html#comgirassolzuizmmseniorestrate-display"
+                "test/flpSandbox.html#zmmseniorsm30zmmseniorsm30-display"
             ],
             "console": "internalConsole",
             "internalConsoleOptions": "openOnSessionStart",
